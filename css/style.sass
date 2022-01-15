@@ -1,0 +1,79 @@
+$primary: #f8f8f8
+$bgsection: #f0f0f0
+$shadow: #2c2c2c
+$mainfont: "Roboto"
+$logofont: "Shrikhand"
+$secondary: #FF79DA
+$color-first: #9356dc
+$tertiaire: #99E2D0
+
+a
+    text-decoration: none
+    color: black
+body
+    margin: 0px
+    padding: 0px
+    display: flex
+    flex-direction: column
+    font-family: $mainfont
+header
+    padding-top: 10px
+    text-align: center
+
+    header:not(.header-title)
+        max-height: 320px
+
+.logo
+    font-size: 27px
+    font-weight: 500
+    color: black
+    margin: 5px
+    font-family: $logofont
+
+.wrapper
+    padding: 0
+    margin: 0 auto
+    background-color: $bgsection
+
+    nav
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: center
+        padding: 5px
+        box-shadow: inset 1px 1px 4px 1px #2c2c2c48
+
+        .localisation
+            box-shadow: inset 0 3px 5px -5px #2c2c2c
+
+            p
+                padding-left: 5px
+                font-family: $mainfont
+
+.explorer
+    background-color: $primary
+    height: 260px
+
+    .explorer-title
+        margin: 0px 80px 0px 80px
+        padding-top: 20px
+
+    .explorer-subtitle
+        font-size: 17px
+        padding: 5px 40px 5px 40px
+
+    .explorer-btn
+        color: $primary
+        background: linear-gradient($secondary, $color-first)
+        border-radius: 30px
+        font-size: 17px
+        border: none
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3)
+        height: 50px
+        width: 40%
+        transition: 0.3s
+
+        &:hover
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3)
+            transform: scale(1.04)
+            cursor: pointer
