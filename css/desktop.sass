@@ -1,0 +1,70 @@
+$breakpoint-desktop: 992px
+
+@media screen and (min-width: $breakpoint-desktop)
+    .explorer
+        height: 500px
+        color: #fff
+        display: flex
+        background-image: url("https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80")
+        background-repeat: no-repeat
+        background-size: cover
+        object-fit: cover
+        .explorer-content
+            padding-top: 130px
+            width: 100%
+            background: rgba(0, 0, 0, 0.5)
+        .explorer-btn
+            width: 20% !important
+
+    .functioning-container
+        display: flex
+        justify-content: center
+        .functioning-block
+            display: flex
+            flex-direction: column
+            width: 20%
+            margin: 20px
+            height: 200px
+            .step
+                margin-left: 0px
+                margin-top: -30px
+                height: 50px
+                width: 50px
+                display: flex
+                align-items: center
+                justify-content: center
+            i
+                font-size: 30px
+                margin: 25px
+                padding: 0
+            p
+                padding: 0
+
+    .card-section
+        display: flex
+        flex-direction: row
+        justify-content: center
+        .card
+            margin: 25px
+            max-height: 300px
+            overflow: hidden;
+            &:hover
+                box-shadow: 1px 1px 10px gray
+                img
+                    box-shadow: 1px 1px 10px gray
+                    border-radius: 20px
+                    transform: scale(1.05)
+                    height: 230px
+                .card-title
+                    display: flex
+                    flex-direction: row
+                    align-items: center
+                    color: #9356dc
+                    p
+                        margin-left: 10px
+                .ribbon
+                    transition: 0.5s
+                .ribbon span
+                    background: linear-gradient( #ff79da, #9356dc)
+                    color: #fff
+                    transform: scale(1.1)
