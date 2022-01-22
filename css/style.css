@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -65,9 +66,32 @@ header header:not(.header-title) {
   font-family: "Roboto";
 }
 
+.btn-secondary {
+  color: #ffffff;
+  border-color: none;
+  background-color: #9356dc;
+  background-size: 0% 100%;
+  background-image: -webkit-gradient(linear, right bottom, left top, from(#FF79DA), to(#9356dc));
+  background-image: linear-gradient(to left top, #FF79DA, #9356dc);
+  background-repeat: no-repeat;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.btn-secondary:hover {
+  border-color: none;
+  background-color: #9356dc;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#9356dc), to(#FF79DA));
+  background-image: linear-gradient(to right top, #9356dc, #FF79DA);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
 .explorer {
   background-color: #f8f8f8;
-  height: 260px;
+  height: 210px;
 }
 
 .explorer .explorer-title {
@@ -81,29 +105,21 @@ header header:not(.header-title) {
 }
 
 .explorer .explorer-btn {
-  color: #f8f8f8;
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356dc));
-  background: linear-gradient(#FF79DA, #9356dc);
-  border-radius: 30px;
-  font-size: 17px;
+  display: inline-block;
+  padding: 12px 15px;
   border: none;
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
-  height: 50px;
-  width: 40%;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  padding: 10px;
-}
-
-.explorer .explorer-btn:hover {
-  -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
-          box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
-  -webkit-transform: scale(1.04);
-          transform: scale(1.04);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 1em;
+  text-align: center;
+  text-decoration: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  white-space: nowrap;
   cursor: pointer;
-  background: -webkit-gradient(linear, left top, left bottom, from(#fc90dd), to(#a479d8));
-  background: linear-gradient(#fc90dd, #a479d8);
+  border-radius: 30px;
 }
 
 .functioning {
