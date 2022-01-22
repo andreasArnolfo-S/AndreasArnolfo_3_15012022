@@ -7,6 +7,9 @@ $secondary: #FF79DA
 $color-first: #9356dc
 $tertiaire: #99E2D0
 
+html
+    scroll-behavior: smooth;
+
 a
     text-decoration: none
     color: black
@@ -70,6 +73,8 @@ header
         height: 50px
         width: 40%
         transition: 0.3s
+        padding: 10px
+        
 
         &:hover
             box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3) //ombre augmente
@@ -201,6 +206,25 @@ header
     height: 300px
     background-size: cover
     object-fit: cover
+.banner-b
+    width: 100%
+    background-image: url("../imgs/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" )
+    height: 300px
+    background-size: cover
+    object-fit: cover
+.banner-c
+    width: 100%
+    background-image: url("../imgs/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" )
+    height: 300px
+    background-size: cover
+    object-fit: cover
+.banner-d
+    width: 100%
+    background-image: url("../imgs/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" )
+    height: 300px
+    background-size: cover
+    object-fit: cover
+
 .nav-menus
     display: flex
     flex-direction: row
@@ -215,6 +239,7 @@ header
     display: flex
     flex-direction: column
     margin-top: -40px
+    padding-bottom: 15px
     
     .menu-title
         margin: 15px
@@ -311,7 +336,6 @@ header
 .footer-section
     background-color: #3f3f3f
     color: #fff
-    margin-top: 20px
     
     .logo
         color: #fff
