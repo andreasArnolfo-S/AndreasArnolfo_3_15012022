@@ -1,4 +1,24 @@
 @media screen and (min-width: 992px) {
+  .banner {
+    height: 400px;
+  }
+  .menu {
+    height: 800px;
+  }
+  .menu .menu-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .menu .menu-block .menu-sub-title {
+    text-align: center;
+    width: 100%;
+  }
+  .menu .menu-block .card-menu-dish {
+    width: 30%;
+  }
   .explorer {
     height: 500px;
     color: #fff;
@@ -16,7 +36,7 @@
     width: 100%;
     background: rgba(0, 0, 0, 0.5);
   }
-  .explorer .explorer-btn {
+  .explorer .explorer-content .explorer-btn {
     width: 20% !important;
   }
   .functioning-container {
@@ -57,9 +77,6 @@
   .functioning-container .functioning-block i {
     font-size: 30px;
     margin: 25px;
-    padding: 0;
-  }
-  .functioning-container .functioning-block p {
     padding: 0;
   }
   .card-section {
@@ -104,19 +121,8 @@
             align-items: center;
     color: #9356dc;
   }
-  .card-section .card:hover .card-title p {
+  .card-section .card:hover p {
     margin-left: 10px;
-  }
-  .card-section .card:hover .ribbon {
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-  }
-  .card-section .card:hover .ribbon span {
-    background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
-    background: linear-gradient(#ff79da, #9356dc);
-    color: #fff;
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
   }
 }
 /*# sourceMappingURL=desktop.css.map */
