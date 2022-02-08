@@ -128,20 +128,40 @@ header header:not(.header-title) {
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   background-color: #f8f8f8;
   border-radius: 25px;
+  cursor: pointer;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  position: relative;
+}
+
+.functioning .functioning-block::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #dcc7f7d2;
+  -webkit-transition: all .35s;
+  transition: all .35s;
+  border-radius: 25px;
 }
 
 .functioning .functioning-block:hover {
-  -webkit-box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2);
-  background-color: #ebe1f8fb;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
 }
 
 .functioning .functioning-block:hover i {
   color: #9356dc;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+}
+
+.functioning .functioning-block:hover::after {
+  width: 100%;
 }
 
 .functioning .functioning-block .step {
@@ -152,14 +172,20 @@ header header:not(.header-title) {
   border-radius: 50px;
   color: #f8f8f8;
   text-align: center;
+  z-index: 2;
+  position: relative;
 }
 
 .functioning .functioning-block i {
   padding-left: 25px;
+  z-index: 2;
+  position: relative;
 }
 
 .functioning .functioning-block p {
   padding-left: 35px;
+  z-index: 2;
+  position: relative;
 }
 
 .restaurant-card-section {
@@ -432,6 +458,8 @@ header header:not(.header-title) {
   -webkit-transform-origin: center right;
           transform-origin: center right;
   width: 6rem;
+  -webkit-transition: .25s ease-in-out 0s;
+  transition: .25s ease-in-out 0s;
 }
 
 .card-menu-dish:hover > .card-menu-dish__checkbox > i {
@@ -502,6 +530,8 @@ header header:not(.header-title) {
           justify-content: center;
   text-align: center;
   overflow: hidden;
+  -webkit-transition: .25s ease-in-out 0.5s;
+  transition: .25s ease-in-out 0.5s;
 }
 
 .card-menu-dish__checkbox i {
@@ -583,7 +613,7 @@ header header:not(.header-title) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  z-index: 2;
+  z-index: 3;
   white-space: nowrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;

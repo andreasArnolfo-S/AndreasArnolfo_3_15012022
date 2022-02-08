@@ -93,14 +93,33 @@ header
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2)
         background-color: $primary
         border-radius: 25px
+        cursor: pointer
+        transition: 0.6s
+        position: relative
+        
+        &::after
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: #dcc7f7d2;
+            transition: all .35s;
+            border-radius: 25px
 
         &:hover
-            box-shadow: 0 8px 10px 0 rgba(0,0,0,0.2)
-            background-color: #ebe1f8fb
-            transition: 0.5s
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2)
+            transition: 0.6s
             i
                 color: $color-first
                 transition: 0.4s
+            &::after
+                 width: 100%
+                 
+
+                
+
         .step
             background-color: $color-first
             width: 18px
@@ -109,10 +128,16 @@ header
             border-radius: 50px
             color: $primary
             text-align: center
+            z-index: 2
+            position: relative
         i
             padding-left: 25px
+            z-index: 2
+            position: relative
         p
             padding-left: 35px
+            z-index: 2
+            position: relative
 
 .restaurant-card-section
     margin-top: 30px
@@ -270,6 +295,7 @@ header
         transform: scaleX(1)
         transform-origin: center right
         width: 6rem
+        transition: .25s ease-in-out 0s
         & > i
             transform: rotate(-1turn)
 
@@ -315,10 +341,11 @@ header
         justify-content: center
         text-align: center
         overflow: hidden
+        transition: .25s ease-in-out 0.5s
         i
-            transform: rotate(1turn)
+            transform: rotate(1turn) // icon fait un tour
             transition: transform 500ms ease-in-out
-        @keyframes itemappear
+        @keyframes itemappear //animation apparition décalée
             0%
                 transform: scale(1)
                 opacity: 0%
@@ -354,7 +381,7 @@ header
     width: 100%
     overflow: auto
     display: flex
-    z-index: 2
+    z-index: 3
     white-space: nowrap
     justify-content: center
     align-items: center
@@ -417,4 +444,3 @@ header
                 border-radius: 60%
                 width: 200px
                 height: 200px
-                
