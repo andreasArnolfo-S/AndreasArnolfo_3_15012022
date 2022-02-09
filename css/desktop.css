@@ -60,6 +60,7 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    top: -20px;
   }
   .functioning-container .functioning-block {
     display: -webkit-box;
@@ -109,35 +110,21 @@
     margin: 25px;
     max-height: 300px;
     max-width: 20%;
-    overflow: hidden;
+    position: relative;
   }
   .card-section .card:hover {
-    -webkit-box-shadow: 1px 1px 10px gray;
-            box-shadow: 1px 1px 10px gray;
+    -webkit-box-shadow: 1px 1px 20px gray;
+            box-shadow: 1px 1px 20px gray;
   }
   .card-section .card:hover img {
-    -webkit-box-shadow: 1px 1px 10px gray;
-            box-shadow: 1px 1px 10px gray;
+    -webkit-box-shadow: 1px 1px 15px gray;
+            box-shadow: 1px 1px 15px gray;
     border-radius: 20px;
-    -webkit-transform: scale(1.05);
-            transform: scale(1.05);
-    height: 230px;
+    -webkit-transform: scale(1.08) skewY(2deg);
+            transform: scale(1.08) skewY(2deg);
   }
   .card-section .card:hover .card-title {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     color: #9356dc;
-  }
-  .card-section .card:hover p {
-    margin-left: 10px;
   }
 }
 /*# sourceMappingURL=desktop.css.map */

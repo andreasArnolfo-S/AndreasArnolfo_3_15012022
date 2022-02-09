@@ -76,10 +76,11 @@ header
     background-image: linear-gradient(to top, $secondary, $color-first)
     color: #fff
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2)
-    transition: all 0.5s
+    transition: 0.5s
     &:hover
         box-shadow: 5px 8px 15px 0 rgba(0,0,0,0.2)
         background-image: linear-gradient(to left top, $secondary, $color-first)
+        transform: scale(1.05)
 
 .functioning
     padding: 20px 20px 0px 20px
@@ -96,16 +97,16 @@ header
         cursor: pointer
         transition: 0.6s
         position: relative
-        
-        &::after
-            position: absolute;
-            content: "";
-            top: 0;
-            left: 0;
-            width: 0;
-            height: 100%;
-            background: #dcc7f7d2;
-            transition: all .35s;
+
+        &:after
+            position: absolute
+            content: ""
+            top: 0
+            left: 0
+            width: 0
+            height: 100%
+            background: #e4d5f8d2
+            transition: all .35s
             border-radius: 25px
 
         &:hover
@@ -114,11 +115,8 @@ header
             i
                 color: $color-first
                 transition: 0.4s
-            &::after
-                 width: 100%
-                 
-
-                
+            &:after
+                width: 100%
 
         .step
             background-color: $color-first
@@ -188,22 +186,45 @@ header
         display: flex
         align-items: center
         justify-content: space-between
-.like
-    margin-right: 10px
-    transistion: 1s
-    &:hover
-        font-weight: bold
-        animation: slideup 1s forwards
-        animation-fill-mode: both
-        background: linear-gradient(to left top, #ff79da, #9356dc)
-        background: -webkit-linear-gradient(to left top, #ff79da, #9356dc)
-        -webkit-background-clip: text
-        -webkit-text-fill-color: transparent
-@keyframes slideup
-    0%
-        opacity: 0%
-    100%
-        opacity: 100%
+
+
+.heart-container
+    position: relative
+    width: 40px
+    height: 40px
+
+    .heart-clip
+        display: block
+        width: 100%
+        height: 100%
+        position: relative
+        overflow: hidden
+        clip-path: url(#svgPath)
+
+        &:hover
+            &::before
+                transform: scale(1)
+                opacity: 1
+
+        &::before
+            content: ""
+            display: block
+            width: 100%
+            height: 100%
+            border-radius: 50%
+            background: linear-gradient(to top, #ff79da, #9356dc)
+            opacity: 0
+            transform: scale(0)
+            transition: transform 0.2s linear, opacity 0.2s linear
+            transform-origin: center 60%
+
+.heart-stroke
+    width: 100%
+    height: 100%
+    position: absolute
+    top: 0
+    left: 0
+    fill: black
 
     .main-menu
         margin-top: -30px
@@ -255,12 +276,24 @@ header
         .like
             margin-right: 10px
             cursor: pointer
-        .like:hover
-            background: linear-gradient(to top, #ff79da, #9356dc)
-            background: -webkit-linear-gradient(to top, #ff79da, #9356dc)
-            -webkit-background-clip: text
-            -webkit-text-fill-color: transparent
-            font-weight: bold
+            &:after
+                content: ""
+                background: linear-gradient(to top, #ff79da, #9356dc)
+                top: 0px
+                left: 0px
+                height: 0px
+                transition: 2s
+                &:hover
+                    animation: likeAnimation 4s forwards
+                @keyframes likeAnimation
+                    0%
+                        opacity: 0
+                    50%
+                        transform: scale(1.08)
+                    100%
+                        opacity: 100%
+                        height: 100%
+                        transform: scale(1)
 
     .menu-block
         align-items: center
@@ -273,11 +306,11 @@ header
 .delay-1
     animation-delay: .6s !important
 .delay-2
-    animation-delay: .8s !important
-.delay-3
     animation-delay: 1s !important
+.delay-3
+    animation-delay: 1.4s !important
 .delay-4
-    animation-delay: 1.2s !important
+    animation-delay: 1.8s !important
 .card-menu-dish
     display: flex
     height: 70px
@@ -288,14 +321,14 @@ header
     margin: 10px
     cursor: pointer
     justify-content: space-between
-    animation: itemappear .6s forwards
+    animation: itemappear 2s forwards
     animation-fill-mode: both
 
     &:hover > .card-menu-dish__checkbox
         transform: scaleX(1)
         transform-origin: center right
         width: 6rem
-        transition: .25s ease-in-out 0s
+        transition: .55s ease-in-out 0s
         & > i
             transform: rotate(-1turn)
 
@@ -341,19 +374,17 @@ header
         justify-content: center
         text-align: center
         overflow: hidden
-        transition: .25s ease-in-out 0.5s
+        transition: .55s ease-in-out 0s
         i
             transform: rotate(1turn) // icon fait un tour
             transition: transform 500ms ease-in-out
         @keyframes itemappear //animation apparition décalée
             0%
-                transform: scale(1)
                 opacity: 0%
-            70%
-                transform: scale(1.04)
+                transform: translate(0px, 20%)
             100%
-                transform: scale(1)
                 opacity: 100%
+                transform: translate(0px, 0%)
 
 .footer-section
     background-color: #3f3f3f

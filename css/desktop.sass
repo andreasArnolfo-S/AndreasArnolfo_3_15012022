@@ -39,12 +39,14 @@ $breakpoint-desktop: 992px
     .functioning-container
         display: flex
         justify-content: center
+        top: -20px
         .functioning-block
             display: flex
             flex-direction: column
             width: 20%
             margin: 20px
             height: 200px
+
             .step
                 margin-left: 0px
                 margin-top: -30px
@@ -57,6 +59,8 @@ $breakpoint-desktop: 992px
                 font-size: 30px
                 margin: 25px
                 padding: 0
+
+
     .card-section
         display: flex
         flex-direction: row
@@ -65,21 +69,19 @@ $breakpoint-desktop: 992px
             margin: 25px
             max-height: 300px
             max-width: 20%
-            overflow: hidden
+            position: relative
+            
             &:hover
-                box-shadow: 1px 1px 10px gray
+                box-shadow: 1px 1px 20px gray
                 img
-                    box-shadow: 1px 1px 10px gray
+                    box-shadow: 1px 1px 15px gray
                     border-radius: 20px
-                    transform: scale(1.05)
-                    height: 230px
+                    transform: scale(1.08) skewY(2deg)
+
                 .card-title
-                    display: flex
-                    flex-direction: row
-                    align-items: center
                     color: #9356dc
-                p
-                    margin-left: 10px
+
+
 
 
 
