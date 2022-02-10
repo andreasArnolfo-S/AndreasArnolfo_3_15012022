@@ -1,0 +1,100 @@
+.card
+    @include shade_Behind
+    transition: 0.3s
+    width: 100%
+    border-radius: 20px
+    margin-top: 15px
+    position: relative
+    cursor: pointer
+    &:hover
+        box-shadow: 0 8px 36px 0 rgba(0,0,0,0.2)
+        .card__title
+            color: $color-first
+    img
+        width: 100%
+        height: 200px
+        border-radius: 20px 20px 0px 0px
+        background-size: cover
+        object-fit: cover
+        transition: 0.4s
+    .ribbon
+        position: absolute
+        right: 10px
+        width: 150px
+        height: 150px
+        z-index: 1
+    .ribbon span
+        border-radius: 5px
+        font-size: 10px
+        font-weight: bold
+        color: #396156
+        font-size: 16px
+        line-height: 40px
+        text-align: center
+        width: 150px
+        display: block
+        background: #a6e9d7
+        position: absolute
+        top: 15px
+        right: 10px
+
+.container
+    padding: 2px 16px
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+.heart__container
+    position: relative
+    width: 40px
+    height: 40px
+
+    .heart__clip
+        display: block
+        width: 100%
+        height: 100%
+        position: relative
+        overflow: hidden
+        clip-path: url(#svgPath)
+
+        &:hover
+            &::before
+                transform: scale(1)
+                opacity: 1
+
+        &::before
+            content: ""
+            display: block
+            width: 100%
+            height: 100%
+            border-radius: 50%
+            background: linear-gradient(to top, #ff79da, #9356dc)
+            opacity: 0
+            transform: scale(0)
+            transition: transform 0.2s linear, opacity 0.2s linear
+            transform-origin: center 60%
+
+.heart__stroke
+    width: 100%
+    height: 100%
+    position: absolute
+    top: 0
+    left: 0
+    fill: black
+    
+@media screen and (min-width: $breakpoint-desktop)
+    .card
+        margin: 25px
+        max-height: 300px
+        max-width: 20%
+        position: relative
+
+        &:hover
+            box-shadow: 1px 1px 20px gray
+            img
+                box-shadow: 1px 1px 15px gray
+                border-radius: 20px
+                transform: scale(1.08) skewY(2deg)
+
+        .card-title
+            color: #9356dc

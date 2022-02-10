@@ -1,0 +1,101 @@
+.menu__block
+    align-items: center
+    margin: auto
+    width: 90%
+    .menu__sub__title
+        border-bottom: 2px solid $tertiaire
+        width: 20%
+
+.delay-1
+    animation-delay: .6s !important
+.delay-2
+    animation-delay: 1s !important
+.delay-3
+    animation-delay: 1.4s !important
+.delay-4
+    animation-delay: 1.8s !important
+.card-menu-dish
+    display: flex
+    height: 70px
+    border-radius: 15px
+    box-shadow: 5px 5px 15px -2px rgba(0, 0, 0, 0.2)
+    background-color: white
+    border: none
+    margin: 10px
+    cursor: pointer
+    justify-content: space-between
+    animation: itemappear 2s forwards
+    animation-fill-mode: both
+
+    &:hover > .card-menu-dish__checkbox
+        transform: scaleX(1)
+        transform-origin: center right
+        width: 6rem
+        transition: .55s ease-in-out 0s
+        & > i
+            transform: rotate(-1turn)
+
+    &__infos
+        width: 100%
+        padding: 0 0 10px 10px
+        text-overflow: ellipsis
+        white-space: nowrap
+        overflow: hidden
+
+    &__title
+
+        font-size: 1.1rem
+        line-height: 1.2
+        margin-bottom: 0.5rem
+        text-overflow: ellipsis
+        white-space: nowrap
+        overflow: hidden
+
+    &__seasoning
+        font-size: 0.9rem
+        text-overflow: ellipsis
+        white-space: nowrap
+        overflow: hidden
+
+    &__price
+        display: flex
+        align-items: flex-end
+        justify-content: center
+        padding-bottom: 10px
+        margin-right: 15px
+
+    &__checkbox
+        background: #99E2D0
+        border-radius: 0 15px 15px 0
+        color: #fff
+        width: 0
+        transform: scaleX(0)
+        transition: transform 500ms ease-in-out
+        transform-origin: center right
+        display: flex
+        flex-direction: column
+        justify-content: center
+        text-align: center
+        overflow: hidden
+        transition: .55s ease-in-out 0s
+        i
+            transform: rotate(1turn) // icon fait un tour
+            transition: transform 500ms ease-in-out
+        @keyframes itemappear //animation apparition décalée
+            0%
+                opacity: 0%
+                transform: translate(0px, 20%)
+            100%
+                opacity: 100%
+                transform: translate(0px, 0%)
+
+@media screen and (min-width: $breakpoint-desktop)
+    .menu__block
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        .menu-sub-title
+            width: 100%
+            border-bottom: 2px solid $tertiaire
+        .card-menu-dish
+            width: 30%
