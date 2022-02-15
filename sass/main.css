@@ -529,7 +529,7 @@ header header:not(.header-title) {
   position: relative;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 680px) {
   .functioning__container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -540,6 +540,17 @@ header header:not(.header-title) {
     top: -20px;
   }
   .functioning__container .functioning__block {
+    width: 32%;
+    margin: 20px;
+  }
+  .functioning__container .functioning__block .step {
+    border-radius: 50%;
+    width: 25px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .functioning__block {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -548,10 +559,9 @@ header header:not(.header-title) {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 20%;
-    margin: 20px;
     height: 200px;
   }
-  .functioning__container .functioning__block:hover .step {
+  .functioning__block:hover .step {
     -webkit-animation: radius 0.5s forwards;
             animation: radius 0.5s forwards;
   }
@@ -569,7 +579,7 @@ header header:not(.header-title) {
       color: black;
     }
   }
-  .functioning__container .functioning__block .step {
+  .functioning__block:hover .step .step {
     margin-left: 0px;
     margin-top: -30px;
     height: 50px;
@@ -584,7 +594,7 @@ header header:not(.header-title) {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .functioning__container .functioning__block i {
+  .functioning__block:hover .step i {
     font-size: 30px;
     margin: 25px;
     padding: 0;
@@ -875,15 +885,29 @@ header header:not(.header-title) {
   padding: 20px 20px 0px 20px;
 }
 
+@media screen and (min-width: 680px) {
+  .card__section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .card__section .card {
+    -ms-flex-preferred-size: 45%;
+        flex-basis: 45%;
+    margin: 15px;
+  }
+}
+
 @media screen and (min-width: 992px) {
   .card__section {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
