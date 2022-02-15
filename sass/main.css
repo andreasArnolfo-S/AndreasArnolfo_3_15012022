@@ -405,10 +405,46 @@ header header:not(.header-title) {
             justify-content: center;
   }
   .menu__block .menu-sub-title {
-    width: 100%;
+    width: 100% !important;
   }
   .menu__block .card-menu-dish {
     width: 30%;
+    -webkit-animation: itemappear 2s forwards;
+            animation: itemappear 2s forwards;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+  }
+  @-webkit-keyframes itemappear {
+    0% {
+      opacity: 0%;
+      -webkit-transform: translate(150px, 0%) scale(1);
+              transform: translate(150px, 0%) scale(1);
+    }
+    90% {
+      -webkit-transform: scale(1.05);
+              transform: scale(1.05);
+    }
+    100% {
+      opacity: 100%;
+      -webkit-transform: translate(0px, 0%) scale(1);
+              transform: translate(0px, 0%) scale(1);
+    }
+  }
+  @keyframes itemappear {
+    0% {
+      opacity: 0%;
+      -webkit-transform: translate(150px, 0%) scale(1);
+              transform: translate(150px, 0%) scale(1);
+    }
+    90% {
+      -webkit-transform: scale(1.05);
+              transform: scale(1.05);
+    }
+    100% {
+      opacity: 100%;
+      -webkit-transform: translate(0px, 0%) scale(1);
+              transform: translate(0px, 0%) scale(1);
+    }
   }
 }
 
