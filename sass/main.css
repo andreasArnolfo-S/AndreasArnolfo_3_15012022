@@ -6,6 +6,7 @@ html {
 a {
   text-decoration: none;
   color: black;
+  cursor: pointer;
 }
 
 body {
@@ -66,10 +67,16 @@ header header:not(.header-title) {
 .card:hover {
   -webkit-box-shadow: 0 8px 36px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 8px 36px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
 }
 
 .card:hover .card__title {
   color: #9356dc;
+}
+
+.card:hover .ribbon span {
+  background: #c1ede2;
 }
 
 .card img {
@@ -101,7 +108,7 @@ header header:not(.header-title) {
   text-align: center;
   width: 150px;
   display: block;
-  background: #a6e9d7;
+  background: #99E2D0;
   position: absolute;
   top: 15px;
   right: 10px;
@@ -201,9 +208,31 @@ header header:not(.header-title) {
   width: 90%;
 }
 
-.menu__block .menu__sub__title {
+.menu__block .menu-sub-title {
   border-bottom: 2px solid #99E2D0;
-  width: 20%;
+  -webkit-animation: line 1.8s forwards;
+          animation: line 1.8s forwards;
+  -webkit-transition: 1.8s;
+  transition: 1.8s;
+  margin: 0;
+}
+
+@-webkit-keyframes line {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 20%;
+  }
+}
+
+@keyframes line {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 20%;
+  }
 }
 
 .delay-1 {
@@ -377,7 +406,6 @@ header header:not(.header-title) {
   }
   .menu__block .menu-sub-title {
     width: 100%;
-    border-bottom: 2px solid #99E2D0;
   }
   .menu__block .card-menu-dish {
     width: 30%;
@@ -572,12 +600,19 @@ header header:not(.header-title) {
 .section__loader h1 {
   position: absolute;
   font-size: 35px;
-  margin-top: 255px;
+  margin-top: 105px;
 }
 
 .section__loader .loader {
-  margin-right: 345px;
-  margin-top: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .section__loader .loader svg {
@@ -692,6 +727,22 @@ header header:not(.header-title) {
   }
   100% {
     fill: #FF79DA;
+  }
+}
+
+@media screen and (min-width: 680px) {
+  .loader svg {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    margin-top: 55px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .loader svg {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    margin-top: 180px;
   }
 }
 
@@ -955,5 +1006,10 @@ header header:not(.header-title) {
 
 .footer__section ul li a {
   color: #fff;
+  line-height: 1.5;
+}
+
+.footer__section ul li a:hover {
+  color: #9356dc;
 }
 /*# sourceMappingURL=main.css.map */

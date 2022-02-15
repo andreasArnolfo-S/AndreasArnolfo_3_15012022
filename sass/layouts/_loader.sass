@@ -8,7 +8,6 @@
     z-index: 3
     white-space: nowrap
     justify-content: center
-   
     align-content: center
     -moz-animation: cssAnimation 0s ease-in 3s forwards
     -webkit-animation: cssAnimation 0s ease-in 3s forwards
@@ -34,10 +33,11 @@
     h1
         position: absolute
         font-size: 35px
-        margin-top: 255px
+        margin-top: 105px
     .loader
-        margin-right: 345px
-        margin-top: 200px
+        display: flex
+        align-items: center
+        justify-content: center
         svg
             fill: transparent
             position: absolute
@@ -79,3 +79,13 @@
                 fill: $tertiaire
             100%
                 fill: $secondary
+
+@media screen and  (min-width: $breakpoint-tablette)
+    .loader svg
+        transform: scale(1.5) 
+        margin-top: 55px
+
+@media screen and  (min-width: $breakpoint-desktop)
+    .loader svg
+        transform: scale(0.8)
+        margin-top: 180px

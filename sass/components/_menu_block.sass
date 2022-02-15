@@ -2,9 +2,17 @@
     align-items: center
     margin: auto
     width: 90%
-    .menu__sub__title
+
+    .menu-sub-title
         border-bottom: 2px solid $tertiaire
-        width: 20%
+        animation: line 1.8s forwards
+        transition: 1.8s
+        margin: 0
+    @keyframes line
+        0%
+            width: 0%
+        100%
+            width: 20%
 
 .delay-1
     animation-delay: .6s !important
@@ -96,6 +104,6 @@
         justify-content: center
         .menu-sub-title
             width: 100%
-            border-bottom: 2px solid $tertiaire
+
         .card-menu-dish
             width: 30%
