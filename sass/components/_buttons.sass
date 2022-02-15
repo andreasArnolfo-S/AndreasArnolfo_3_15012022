@@ -1,0 +1,17 @@
+.explorer__btn
+    padding: 12px 15px
+    border: none
+    box-sizing: border-box
+    font-size: 1em
+    text-align: center
+    text-decoration: none
+    cursor: pointer
+    border-radius: 30px
+    background-image: linear-gradient(to top, $secondary, $color-first)
+    color: #fff
+    @include shade_Behind
+    transition: 0.5s
+    &:hover
+        box-shadow: 5px 8px 15px 0 rgba(0,0,0,0.2)
+        background-image: linear-gradient(to left top, #df7ec3, #a271df)
+        transform: scale(1.05)

@@ -9,30 +9,48 @@
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
     <title>OhMyFood</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/desktop.css">
+    <!-- <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/desktop.css"> -->
+    <link rel="stylesheet" href="../sass/main.css">
     <!--lien vers mon css traduit-->
 </head>
 
 <body>
     <header>
-        <div class="nav-menus">
+        <nav class="nav__menus">
             <a href="../index.html"><i class="fas fa-arrow-left"></i></a>
             <h1 class="logo">ohmyfood</h1>
-        </div>
+        </nav>
         <div class="banner a"></div>
         <!-- <img class="banner" src="../imgs/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt=""> -->
     </header>
 
     <section class="menu">
-        <div class="menu-title">
+        <div class="menu__title">
             <h1 class="logo ">La palette du goût</h1>
-            <i class="far fa-heart fa-2x like" aria-hidden="true"></i>
+            <svg id='heart' height="0" width="0">
+                <defs>
+                    <clipPath id="svgPath">
+                        <path
+                            d="M20,35.09,4.55,19.64a8.5,8.5,0,0,1-.13-12l.13-.13a8.72,8.72,0,0,1,12.14,0L20,10.79l3.3-3.3a8.09,8.09,0,0,1,5.83-2.58,8.89,8.89,0,0,1,6.31,2.58,8.5,8.5,0,0,1,.13,12l-.13.13Z" />
+                    </clipPath>
+                </defs>
+            </svg>
+
+            <div class="heart__container">
+                <svg width="40" height="40" viewBox="0 0 40 40" class='heart__stroke'>
+                    <path
+                        d="M20,35.07,4.55,19.62a8.5,8.5,0,0,1-.12-12l.12-.12a8.72,8.72,0,0,1,12.14,0L20,10.77l3.3-3.3A8.09,8.09,0,0,1,29.13,4.9a8.89,8.89,0,0,1,6.31,2.58,8.5,8.5,0,0,1,.12,12l-.12.12ZM10.64,7.13A6.44,6.44,0,0,0,6.07,18.19L20,32.06,33.94,18.12A6.44,6.44,0,0,0,34,9l0,0a6.44,6.44,0,0,0-4.77-1.85A6,6,0,0,0,24.83,9L20,13.78,15.21,9A6.44,6.44,0,0,0,10.64,7.13Z" />
+
+                </svg>
+
+                <a href='#' class='heart__clip'></a>
+            </div>
         </div>
        
-        <div class="menu-block">
+        <div class="menu__block">
             <h2 class="menu-sub-title">ENTRÉES</h2>
-
+            
             <div class="card-menu-dish  delay-1">
                 <div class="card-menu-dish__infos">
                     <h3 class="card-menu-dish__title">Fricassée d'escargot</h3>
@@ -116,16 +134,16 @@
                 <div class="card-menu-dish__checkbox"><i class="fas fa-check-circle"></i></div>
             </div>
         </div>
-        <a class="explorer-btn">Comander</a>
+        <a class="explorer__btn">Comander</a>
     </section>
 
-    <footer class="footer-section">
+    <footer class="footer__section">
         <h1 class="logo">ohmyfood</h1>
         <ul>
-            <li>Proposer un restaurant</li>
-            <li>Devenir partenaire</li>
-            <li>Mentions légales</li>
-            <li>Contact</li>
+            <li><i class="fas fa-utensils"></i><a href="#">Proposer un restaurant</a> </li>
+            <li><i class="fa-solid fa-handshake-angle"></i><a href="#">Devenir partenaire</a></li>
+            <li><a href="#">Mentions légales</a></li>
+            <li><a href="mailto:andreas.arnolfo@gmail.com">Contact</a></li>
         </ul>
     </footer>
 
