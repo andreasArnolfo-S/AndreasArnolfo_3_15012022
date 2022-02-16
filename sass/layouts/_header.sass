@@ -17,33 +17,14 @@
         justify-content: center
         padding: 5px
         box-shadow: inset 1px 1px 4px 1px #2c2c2c48
-
-        .localisation
-            box-shadow: inset 0 3px 5px -5px #2c2c2c
-
-            p
-                padding-left: 5px
-                font-family: $mainfont
+        .localisation__city
+            margin-left: 10px
+            font-family: $mainfont
 
 .explorer
     background-color: $primary
     height: 210px
-
-    .explorer__title
-        margin: 0px 80px 0px 80px
-        padding-top: 20px
-
-    .explorer__subtitle
-        font-size: 17px
-        padding: 5px 40px 5px 40px
-        
-.fa-arrow-left
-    position: absolute
-    left: 25px
-    top: 25px
-    
-@media screen and (min-width: $breakpoint-desktop)
-    .explorer
+    @include desktop-only
         height: 500px
         color: #fff
         display: flex
@@ -57,3 +38,17 @@
             background: rgba(0, 0, 0, 0.5)
             .explorer__btn
                 width: 20% !important
+    .explorer__title
+        margin: 0px 80px 0px 80px
+        padding-top: 20px
+
+    .explorer__subtitle
+        font-size: 17px
+        padding: 5px 40px 5px 40px
+
+.fa-arrow-left
+    position: absolute
+    left: 25px
+    top: 25px
+
+

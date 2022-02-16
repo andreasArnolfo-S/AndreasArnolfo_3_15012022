@@ -5,6 +5,13 @@
     flex-direction: column
     margin-top: -40px
     padding-bottom: 15px
+    @include desktop-only
+        height: 800px
+        width: 100%
+        margin-top: -150px
+        margin-left: auto
+        margin-right: auto
+        box-shadow: 1px 1px 35px #22222271
     .explorer__btn
         width: 40%
         margin: auto
@@ -13,6 +20,9 @@
         margin: 15px
         display: flex
         justify-content: space-between
+        @include desktop-only
+            margin-left: 43%
+            align-items: center
         .like
             margin-right: 10px
             cursor: pointer
@@ -35,17 +45,4 @@
                         height: 100%
                         transform: scale(1)
 
-
-
-@media screen and (min-width: $breakpoint-desktop)
-    .menu
-        height: 800px
-        width: 100%
-        margin-top: -150px
-        margin-left: auto
-        margin-right: auto
-        box-shadow: 1px 1px 35px #22222271
-        .menu__title
-            margin-left: 43%
-            align-items: center
 

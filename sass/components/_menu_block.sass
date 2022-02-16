@@ -1,13 +1,19 @@
+
 .menu__block
     align-items: center
     margin: auto
     width: 90%
-
+    @include desktop-only
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
     .menu-sub-title
         border-bottom: 2px solid $tertiaire
         animation: line 1.8s forwards
         transition: 1.8s
         margin: 0
+        @include desktop-only
+            width: 100% !important
     @keyframes line
         0%
             width: 0%
@@ -34,11 +40,18 @@
     justify-content: space-between
     animation: itemappear 2s forwards
     animation-fill-mode: both
+    @include desktop-only
+        width: 30%
+        animation: itemappear-right 2s forwards
+        animation-fill-mode: both
+        height: 100px
+        align-items: center
 
     &:hover > .card-menu-dish__checkbox
         transform: scaleX(1)
         transform-origin: center right
         width: 6rem
+        height: 100%
         transition: .55s ease-in-out 0s
         & > i
             transform: rotate(-1turn)
@@ -77,6 +90,7 @@
         border-radius: 0 15px 15px 0
         color: #fff
         width: 0
+        height: 100%
         transform: scaleX(0)
         transition: transform 500ms ease-in-out
         transform-origin: center right
@@ -96,25 +110,12 @@
             100%
                 opacity: 100%
                 transform: translate(0px, 0%)
-
-@media screen and (min-width: $breakpoint-desktop)
-    .menu__block
-        display: flex
-        flex-wrap: wrap
-        justify-content: center
-        .menu-sub-title
-            width: 100% !important
-
-        .card-menu-dish
-            width: 30%
-            animation: itemappear 2s forwards
-            animation-fill-mode: both
-            @keyframes itemappear //animation apparition décalée
-                0% 
-                    opacity: 0% 
-                    transform: translate(150px, 0%) scale(1)
-                90%
-                    transform: scale(1.05)
-                100%
-                    opacity: 100%
-                    transform: translate(0px, 0%) scale(1)
+        @keyframes itemappear-right
+            0%
+                opacity: 0%
+                transform: translate(150px, 0%) scale(1)
+            90%
+                transform: scale(1.05)
+            100%
+                opacity: 100%
+                transform: translate(0px, 0%) scale(1)
