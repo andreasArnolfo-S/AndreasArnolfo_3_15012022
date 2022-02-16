@@ -24,22 +24,7 @@
 .explorer
     background-color: $primary
     height: 210px
-
-    .explorer__title
-        margin: 0px 80px 0px 80px
-        padding-top: 20px
-
-    .explorer__subtitle
-        font-size: 17px
-        padding: 5px 40px 5px 40px
-
-.fa-arrow-left
-    position: absolute
-    left: 25px
-    top: 25px
-
-@media screen and (min-width: $breakpoint-desktop)
-    .explorer
+    @include desktop-only
         height: 500px
         color: #fff
         display: flex
@@ -53,3 +38,17 @@
             background: rgba(0, 0, 0, 0.5)
             .explorer__btn
                 width: 20% !important
+    .explorer__title
+        margin: 0px 80px 0px 80px
+        padding-top: 20px
+
+    .explorer__subtitle
+        font-size: 17px
+        padding: 5px 40px 5px 40px
+
+.fa-arrow-left
+    position: absolute
+    left: 25px
+    top: 25px
+
+
