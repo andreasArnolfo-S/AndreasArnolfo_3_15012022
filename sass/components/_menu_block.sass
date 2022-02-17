@@ -53,6 +53,8 @@
         width: 6rem
         height: 100%
         transition: .55s ease-in-out 0s
+        @include desktop-only
+            width: 10rem
         & > i
             transform: rotate(-1turn)
 
@@ -113,9 +115,9 @@
         @keyframes itemappear-right
             0%
                 opacity: 0%
-                transform: translate(150px, 0%) scale(1)
+                transform: translate(150px, 0%) skew(20deg)
             90%
-                transform: scale(1.05)
+                transform: scale(1.03)
             100%
                 opacity: 100%
                 transform: translate(0px, 0%) scale(1)
