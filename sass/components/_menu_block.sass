@@ -1,3 +1,4 @@
+@use '../abstracts' as *
 
 .menu__block
     align-items: center
@@ -103,21 +104,21 @@
         overflow: hidden
         transition: .55s ease-in-out 0s
         i
-            transform: rotate(1turn) // icon fait un tour
+            transform: rotate(1turn) 
             transition: transform 500ms ease-in-out
-        @keyframes itemappear //animation apparition décalée
+        @keyframes itemappear 
             0%
-                opacity: 0%
+                opacity: 0
                 transform: translate(0px, 20%)
             100%
-                opacity: 100%
+                opacity: 1
                 transform: translate(0px, 0%)
         @keyframes itemappear-right
             0%
-                opacity: 0%
+                opacity: 0
                 transform: translate(150px, 0%) skew(20deg)
             90%
                 transform: scale(1.03)
             100%
-                opacity: 100%
+                opacity: 1
                 transform: translate(0px, 0%) scale(1)

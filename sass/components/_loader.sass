@@ -1,3 +1,4 @@
+@use '../abstracts' as *
 
 .section__loader
     background-color: #fff
@@ -25,11 +26,11 @@
             visibility: hidden
 
     @-webkit-keyframes cssAnimation
-        0%
-        opacity: 1
-        100%
-        opacity: 0
-        visibility: hidden
+            0%
+                opacity: 1
+            100%
+                opacity: 0
+                visibility: hidden
 
     h1
         position: absolute
