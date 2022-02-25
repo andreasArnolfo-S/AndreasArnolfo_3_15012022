@@ -1,4 +1,4 @@
-@use '../abstracts' as *
+@use '../abstracts' as a
 
 .section__loader
     background-color: #fff
@@ -17,20 +17,7 @@
     animation: cssAnimation 0s ease-in 3s forwards
     -webkit-animation-fill-mode: forwards
     animation-fill-mode: forwards
-
-    @keyframes cssAnimation
-        0%
-            opacity: 1
-        100%
-            opacity: 0
-            visibility: hidden
-
-    @-webkit-keyframes cssAnimation
-            0%
-                opacity: 1
-            100%
-                opacity: 0
-                visibility: hidden
+    @include a.loader_cssAnimation
 
     h1
         position: absolute
@@ -44,17 +31,16 @@
             fill: transparent
             position: absolute
             transform: scale(2)
-            @include tablette-only
+            @include a.tablette-only
                 transform: scale(1.2)
                 margin-top: 55px
-            @include desktop-only
+            @include a.desktop-only
                 transform: scale(0.8)
                 margin-top: 180px
             path
                 position: absolute
                 transition: 1s
                 animation: slide 2.1s forwards, bgColor 2s infinite
-
                 &:nth-child(1)
                     animation-delay: 0.75s
                 &:nth-child(2)
@@ -67,25 +53,6 @@
                     animation-delay: 1.2s
                 &:nth-child(6)
                     animation-delay: 1.2s
+        @include a.loader_slide
+        @include a.loader_bgColor
 
-        @keyframes slide
-            0%
-                transform: translateX(550px)
-            50%
-                transform: translateX(0px)
-            80%
-                transform: translateX(0px)
-            90%
-                transform: skewX(10deg)
-                opacity: 1
-            100%
-                transform: translateX(-700px)
-                opacity: 0
-
-        @keyframes bgColor
-            0%
-                fill: $color-first
-            50%
-                fill: $tertiaire
-            100%
-                fill: $secondary

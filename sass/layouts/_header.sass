@@ -1,17 +1,17 @@
-@use '../abstracts' as *
-@use '../components' as *
+@use '../abstracts' as a
+@use '../components' 
 
 .logo
     font-size: 27px
     font-weight: 500
     color: black
     margin: 5px
-    font-family: $logofont
+    font-family: a.$logofont
 
 .wrapper
     padding: 0
     margin: 0 auto
-    background-color: $bgsection
+    background-color: a.$bgsection
 
     nav
         display: flex
@@ -22,12 +22,12 @@
         box-shadow: inset 1px 1px 4px 1px #2c2c2c48
         .localisation__city
             margin-left: 10px
-            font-family: $mainfont
+            font-family: a.$mainfont
 
 .explorer
-    background-color: $primary
+    background-color: a.$primary
     height: 210px
-    @include desktop-only
+    @include a.desktop-only
         height: 500px
         color: #fff
         display: flex

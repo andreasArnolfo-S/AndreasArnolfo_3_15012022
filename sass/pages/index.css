@@ -773,11 +773,6 @@ header header:not(.header-title) {
   z-index: 2;
   position: relative;
 }
-@media screen and (min-width: 680px) {
-  .functioning .functioning__container .functioning__block p {
-    padding-left: 5px;
-  }
-}
 
 .restaurant__card__section {
   margin-top: 30px;
@@ -875,4 +870,4 @@ header header:not(.header-title) {
     height: 100%;
     transform: scale(1);
   }
-}/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=index.css.map */

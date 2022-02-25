@@ -1,4 +1,4 @@
-@use '../abstracts' as *
+@use '../abstracts' as a
 @use '../components' as *
 
 .footer__section
@@ -13,8 +13,11 @@
 
         li
             list-style: none
+            i
+                margin-right: 15px
+                width: 15px
             a
                 color: #fff
                 line-height: 1.5
                 &:hover
-                    color: $color-first
+                    color: a.$color-first

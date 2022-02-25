@@ -1,25 +1,21 @@
-@use '../abstracts' as *
+@use '../abstracts' as a
 
 .menu__block
     align-items: center
     margin: auto
     width: 90%
-    @include desktop-only
+    @include a.desktop-only
         display: flex
         flex-wrap: wrap
         justify-content: center
     .menu-sub-title
-        border-bottom: 2px solid $tertiaire
+        border-bottom: 2px solid a.$tertiaire
         animation: line 1.8s forwards
         transition: 1.8s
         margin: 0
-        @include desktop-only
+        @include a.desktop-only
             width: 100% !important
-    @keyframes line
-        0%
-            width: 0%
-        100%
-            width: 20%
+    @include a.menu_block_line
 
 .delay-1
     animation-delay: .6s !important
@@ -41,7 +37,7 @@
     justify-content: space-between
     animation: itemappear 2s forwards
     animation-fill-mode: both
-    @include desktop-only
+    @include a.desktop-only
         width: 30%
         animation: itemappear-right 2s forwards
         animation-fill-mode: both
@@ -54,7 +50,7 @@
         width: 6rem
         height: 100%
         transition: .55s ease-in-out 0s
-        @include desktop-only
+        @include a.desktop-only
             width: 10rem
         & > i
             transform: rotate(-1turn)
@@ -106,19 +102,5 @@
         i
             transform: rotate(1turn) 
             transition: transform 500ms ease-in-out
-        @keyframes itemappear 
-            0%
-                opacity: 0
-                transform: translate(0px, 20%)
-            100%
-                opacity: 1
-                transform: translate(0px, 0%)
-        @keyframes itemappear-right
-            0%
-                opacity: 0
-                transform: translate(150px, 0%) skew(20deg)
-            90%
-                transform: scale(1.03)
-            100%
-                opacity: 1
-                transform: translate(0px, 0%) scale(1)
+        @include a.menu_block_itemAppear
+        @include a.menu_block_itemAppear-right

@@ -1,12 +1,12 @@
-@use '../abstracts' as *
-@use '../base' as *
-@use '../components' as *
-@use '../layouts' as *
+@use '../abstracts' as a
+@use '../base' 
+@use '../components'
+@use '../layouts' 
 
 .functioning
     padding: 20px 20px 0px 20px
     .functioning__container
-        @include tablette-only
+        @include a.tablette-only
             display: flex
             justify-content: center
             top: -20px
@@ -16,16 +16,16 @@
             flex-direction: row
             align-items: center
             margin-top: 15px
-            @include shade_Behind
-            background-color: $primary
+            @include a.shade_Behind
+            background-color: a.$primary
             border-radius: 25px
             cursor: pointer
             transition: 0.6s
             position: relative
-            @include tablette-only
+            @include a.tablette-only
                 width: 32%
                 margin: 20px
-            @include desktop-only
+            @include a.desktop-only
                 flex-direction: column
                 width: 20%
                 height: 200px
@@ -43,36 +43,28 @@
                 box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2)
                 transition: 0.6s
                 i
-                    color: $color-first
+                    color: a.$color-first
                     transition: 0.4s
                 &:after
                     width: 100%
                 .step
-                    @include desktop-only
+                    @include a.desktop-only
                         animation: radius 0.5s forwards
-                        @keyframes radius
-                            0%
-                                transform: scale(1)
-                            50%
-                                transform: scale(1.3) rotate(1turn)
-                            100%
-                                box-shadow: inset 5px 65px 3px $tertiaire
-                                color: black
-                                transform: scale(1) rotate(1turn)
+                        @include a.step_rotate
             .step
-                background-color: $color-first
+                background-color: a.$color-first
                 width: 18px
                 margin-left: -10px
                 padding: 5px
                 border-radius: 50px
-                color: $primary
+                color: a.$primary
                 text-align: center
                 z-index: 2
                 position: relative
-                @include tablette-only
+                @include a.tablette-only
                     border-radius: 50%
                     width: 25px
-                @include desktop-only
+                @include a.desktop-only
                     margin-left: 0px
                     margin-top: -30px
                     height: 50px
@@ -84,7 +76,7 @@
                 padding-left: 25px
                 z-index: 2
                 position: relative
-                @include desktop-only
+                @include a.desktop-only
                     font-size: 30px
                     margin: 25px
                     padding: 0
@@ -92,16 +84,18 @@
                 padding-left: 35px
                 z-index: 2
                 position: relative
+                @include a.tablette-only
+                    padding-left: 5px
 .restaurant__card__section
     margin-top: 30px
     margin-bottom: 30px
-    background-color: $primary
+    background-color: a.$primary
     padding: 20px 20px 0px 20px
 .card__section
-    @include tablette-only
+    @include a.tablette-only
         display: flex
         flex-wrap: wrap
         justify-content: center
-    @include desktop-only
+    @include a.desktop-only
         display: flex
         justify-content: center

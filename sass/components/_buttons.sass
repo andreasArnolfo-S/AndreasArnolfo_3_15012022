@@ -1,4 +1,4 @@
-@use '../abstracts' as *
+@use '../abstracts' as a
 
 .explorer__btn
     padding: 12px 15px
@@ -9,9 +9,9 @@
     text-decoration: none
     cursor: pointer
     border-radius: 30px
-    background-image: linear-gradient(to top, $secondary, $color-first)
+    background-image: linear-gradient(to top, a.$secondary, a.$color-first)
     color: #fff
-    @include shade_Behind
+    @include a.shade_Behind
     transition: 0.5s
     &:hover
         box-shadow: 5px 8px 15px 0 rgba(0,0,0,0.2)

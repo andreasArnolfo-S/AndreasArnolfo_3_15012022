@@ -1,12 +1,102 @@
-@use 'variables' as *
+//--------------------Use----------------------//
+
+@use 'variables' as a
+
+//--------------------Classic----------------------//
 
 @mixin shade_Behind
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2)
 
+//--------------------Responsiv----------------------//
+    
 @mixin tablette-only
-    @media screen and (min-width: map-get($breakpoints, tablette))
+    @media screen and (min-width: map-get(a.$breakpoints, tablette))
         @content
 
 @mixin desktop-only
-    @media screen and (min-width: map-get($breakpoints, desktop))
+    @media screen and (min-width: map-get(a.$breakpoints, desktop))
         @content
+
+//--------------------Animations----------------------//
+
+// Loader apparait puis disparait
+@mixin loader_cssAnimation
+    @keyframes cssAnimation
+        0%
+            opacity: 1
+        100%
+            opacity: 0
+            visibility: hidden
+// Loader SVG slide de droite a gauche
+@mixin loader_slide
+    @keyframes slide
+        0%
+            transform: translateX(550px)
+        50%
+            transform: translateX(0px)
+        80%
+            transform: translateX(0px)
+        90%
+            transform: skewX(10deg)
+            opacity: 1
+        100%
+            transform: translateX(-700px)
+            opacity: 0
+// Loader SVG change de couleur
+@mixin loader_bgColor
+    @keyframes bgColor
+        0%
+            fill: a.$color-first
+        50%
+            fill: a.$tertiaire
+        100%
+            fill: a.$secondary
+// Coeur SVG se remplit progressivement
+@mixin heart_like
+    @keyframes likeAnimation
+        0%
+            opacity: 0
+        50%
+            transform: scale(1.08)
+        100%
+            opacity: 100%
+            height: 100%
+            transform: scale(1)
+
+@mixin menu_block_line
+    @keyframes line
+        0%
+            width: 0%
+        100%
+            width: 20%
+
+@mixin menu_block_itemAppear
+    @keyframes itemappear
+        0%
+            opacity: 0
+            transform: translate(0px, 20%)
+        100%
+            opacity: 1
+            transform: translate(0px, 0%)
+
+@mixin menu_block_itemAppear-right
+    @keyframes itemappear-right           
+        0%
+            opacity: 0
+            transform: translate(150px, 0%) skew(20deg)
+        90%
+            transform: scale(1.03)
+        100%
+            opacity: 1
+            transform: translate(0px, 0%) scale(1)
+
+@mixin step_rotate
+    @keyframes radius
+        0%
+            transform: scale(1)
+        50%
+            transform: scale(1.3) rotate(1turn)
+        100%
+            box-shadow: inset 5px 65px 3px a.$tertiaire
+            color: black
+            transform: scale(1) rotate(1turn)
