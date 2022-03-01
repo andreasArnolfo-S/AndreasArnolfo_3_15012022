@@ -56,20 +56,18 @@
     @keyframes likeAnimation
         0%
             opacity: 0
-        50%
-            transform: scale(1.08)
         100%
-            opacity: 100%
+            opacity: 1
             height: 100%
             transform: scale(1)
-
+// Ligne en dessous des titre de menu
 @mixin menu_block_line
     @keyframes line
         0%
             width: 0%
         100%
             width: 20%
-
+// les menus apparaissent progressivement du bas vers le haut
 @mixin menu_block_itemAppear
     @keyframes itemappear
         0%
@@ -78,7 +76,7 @@
         100%
             opacity: 1
             transform: translate(0px, 0%)
-
+// les menus apparaissent progressivement de la droite vers le gauche (desktop)
 @mixin menu_block_itemAppear-right
     @keyframes itemappear-right           
         0%
@@ -89,7 +87,7 @@
         100%
             opacity: 1
             transform: translate(0px, 0%) scale(1)
-
+// les numero step fond un tour et change de couleur progressivementd
 @mixin step_rotate
     @keyframes radius
         0%

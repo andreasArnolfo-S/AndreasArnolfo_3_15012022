@@ -1,7 +1,6 @@
 html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
-  padding: auto;
 }
 
 a {
@@ -854,11 +853,8 @@ header header:not(.header-title) {
   0% {
     opacity: 0;
   }
-  50% {
-    transform: scale(1.08);
-  }
   100% {
-    opacity: 100%;
+    opacity: 1;
     height: 100%;
     transform: scale(1);
   }
@@ -867,11 +863,8 @@ header header:not(.header-title) {
   0% {
     opacity: 0;
   }
-  50% {
-    transform: scale(1.08);
-  }
   100% {
-    opacity: 100%;
+    opacity: 1;
     height: 100%;
     transform: scale(1);
   }
